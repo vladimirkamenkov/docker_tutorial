@@ -17,6 +17,7 @@
 11. `docker logs {id_container}` - логи -d контейнера
 12. `docker attach {id_container}` - прикрепить (запустить) терминал запущенного контейнера в -d(etouch) моде
 13. `export DOCKER_HOST=1.1.1.1` - переключить докер на удаленный хост (`DOCKER_HOST=` для переключения на локаль)
+14. `docker -H=remote-docker run ....` - запуск (любая другая команда) удаленного контейнера докер
 
 ## Docker run
 
@@ -40,7 +41,7 @@
 
 1. docker-compose.yml
 `
-version: 2
+version: "2"
 services:
     web: 
         image: "image_web"
